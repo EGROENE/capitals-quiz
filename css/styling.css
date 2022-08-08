@@ -1,6 +1,5 @@
 :root {
-    --default-font: 'Oleo Script Swash Caps', cursive;
-    --secondary-font: 'Aref Ruqaa', serif;
+    --primary-font: 'Aref Ruqaa', serif;
     --size-4: 0.25rem;
     --size-8: 0.5rem;
     --size-12: 0.75rem;
@@ -17,4 +16,42 @@
 body {
     background: url(../assets/initial-bg.jpg);
     background-size: cover;
+}
+
+#hero {
+    padding: 125px;
+}
+
+#greeting-heading {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: var(--size-12) 0;
+    margin: var(--size-64) 240px;
+    border-radius: var(--size-12);
+}
+
+#greeting-heading h1 {
+    font-family: var(--primary-font);
+}
+
+#greeting-heading h2 {
+    font-family: var(--primary-font);
+}
+
+#greeting-heading button {
+    border-radius: var(--size-12);
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    background-color: transparent;
+    border: var(--size-4) solid white;
+    color: white;
+    padding: var(--size-8);
+    font-size: var(--size-20);
+}
+
+#greeting-heading button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
