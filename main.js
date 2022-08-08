@@ -25,6 +25,7 @@ const alabama = () => {
         + '<button class="wrong-option">' + statesInfo[0].wrongOptionTwo + '</button>'
         + '<button class="wrong-option">' + statesInfo[0].wrongOptionOne + '</button>'
         + '<button class="correct-option">' + statesInfo[0].stateCapital + '</button>'
+        + '<div>' + totalScore + '</div>'
     let correctOption = document.getElementsByClassName('correct-option');
     let wrongOption = document.getElementsByClassName('wrong-option');
     correctOption.addEventListener('click', function() {
