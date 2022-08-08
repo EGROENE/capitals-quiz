@@ -13,10 +13,6 @@
     --size-64: 4rem;
 }
 
-body {
-    background-size: cover;
-}
-
 #hero {
     padding: 125px;
 }
