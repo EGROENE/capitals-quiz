@@ -28,11 +28,6 @@ const alabama = () => {
         + '<div>' + totalScore + '</div>'
     let correctOption = document.getElementsByClassName('correct-option');
     let wrongOption = document.getElementsByClassName('wrong-option');
-    correctOption.addEventListener('click', function() {
-        return totalScore += 1;
-    })
-    wrongOption.addEventListener('click', function() {
-        totalScore += 0;
-    })
+    // Add button-click if statement(s) here:
     document.getElementById('total-score').innerHTML = totalScore;
 }
