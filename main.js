@@ -45,6 +45,16 @@ const ifWrong = () => {
     document.getElementById('total-score').innerHTML = 'Nope! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
 }
 
+// Function to disable 'next' button upon loading of new question:
+const disableNextBtn = () => {
+    document.getElementById('next-btn').disabled = true;
+}
+
+// Function to enable 'next' button after question has been answered:
+const enableNextBtn = () => {
+    document.getElementById('next-btn').disabled = false;
+}
+
 // REGARDING STATES' INFO:
 // Add array of objects, each of which contain states' info:
 const statesInfo = [
@@ -61,13 +71,14 @@ const alabama = () => {
     document.getElementById('greeting-box').style.display = 'none';
     document.getElementById('display-question').innerHTML += 
         '<header>What\'s the capital of ' + statesInfo[0].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong()>' + statesInfo[0].wrongOptionThree + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong()>' + statesInfo[0].wrongOptionTwo + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong()>' + statesInfo[0].wrongOptionOne + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect()>' + statesInfo[0].stateCapital + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionThree + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionTwo + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionOne + '</button>'
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[0].stateCapital + '</button>'
         + '<div id= "total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button>Next</button>'
+        + '<button id="next-btn">Next</button>'
         + '</div>'
+        disableNextBtn();
 }
