@@ -4,15 +4,19 @@ const setInitialBackground = () => {
     document.body.style.backgroundSize = 'cover';
 }
 
+// Function to reduce #hero padding when first question loads:
+const reduceHeroPadding = () => {
+    document.getElementById('hero').style.padding = '64px';
+}
 
 // Function to hide #display-question section initially:
 const hideQuestion = () => {
-    document.getElementById('display-question').backgroundColor = 'transparent';
+    document.getElementById('display-question').style.display = "none";
 }
 
 // Function to show #display-question section upon click of 'let's go!' btn:
 const showQuestion = () => {
-    document.getElementById('display-question').backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    document.getElementById('display-question').style.display = "grid";
 }
 
 // Initialize quiz score at 0:
@@ -88,7 +92,7 @@ const alabama = () => {
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[0].stateCapital + '</button>'
         + '<div id= "total-score"></div>'
         + '<div id="reset-next-btns">'
-        + '<button onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button id="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button id="next-btn">Next</button>'
         + '</div>'
         disableNextBtn();

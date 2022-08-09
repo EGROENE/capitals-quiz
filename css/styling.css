@@ -15,6 +15,7 @@
 
 #hero {
     padding: 125px;
+    text-align: center;
 }
 
 #greeting-box {
@@ -52,7 +53,55 @@
 }
 
 #display-question {
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
-    padding: var(--size-64);
+    padding: var(--size-32);
+    margin: 48px 256px 0 256px;
+    row-gap: var(--size-12);
+}
+
+#display-question header,
+#total-score {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: var(--size-32);
+}
+
+#display-question button {
+    font-family: 'Aref Ruqaa', serif;
+    font-size: var(--size-24);
+    padding-bottom: var(--size-8);
+    border: var(--size-4) solid transparent;
+}
+
+#display-question button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: var(--size-4) solid white;
+}
+
+#total-score {
+    font-size: var(--size-24);
+}
+
+#reset-btn,
+#next-btn {
+    color: white;
+    border: var(--size-4) solid white;
+}
+
+#reset-btn:hover,
+#next-btn:hover {
+    background-color: transparent;
+}
+
+#reset-btn {
+    background-color: crimson;
+    color: white;
+}
+
+#next-btn {
+    background-color: navy;
+    margin-left: var(--size-16);
 }
