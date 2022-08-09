@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+    #hero {
+        padding: 88px;
+    }
+
+    #greeting-box {
+        margin: 48px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #hero {
+        padding: 42px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #hero {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #hero {
+        padding: 32px;
+    }
+
+    #greeting-box {
+        margin: 24px;
+    }
+}
