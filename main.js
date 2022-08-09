@@ -65,6 +65,9 @@ const alabama = () => {
         + '<button class="option wrong-option" onclick=ifWrong()>' + statesInfo[0].wrongOptionTwo + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong()>' + statesInfo[0].wrongOptionOne + '</button>'
         + '<button class= "option" id="correct-option" onclick=ifCorrect()>' + statesInfo[0].stateCapital + '</button>'
-    document.getElementById("reset-next-btns").innerHTML += '<button onclick="window.location.href=window.location.href">Reset Game</button>    ';
-    document.getElementById("reset-next-btns").innerHTML += '<button>Next</button>';
+        + '<div id= "total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button>Next</button>'
+        + '</div>'
 }
