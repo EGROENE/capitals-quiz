@@ -4,6 +4,17 @@ const setInitialBackground = () => {
     document.body.style.backgroundSize = 'cover';
 }
 
+
+// Function to hide #display-question section initially:
+const hideQuestion = () => {
+    document.getElementById('display-question').backgroundColor = 'transparent';
+}
+
+// Function to show #display-question section upon click of 'let's go!' btn:
+const showQuestion = () => {
+    document.getElementById('display-question').backgroundColor = 'rgba(0, 0, 0, 0.7)';
+}
+
 // Initialize quiz score at 0:
 let totalScore = 0;
 
