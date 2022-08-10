@@ -86,27 +86,27 @@
     font-size: var(--size-24);
 }
 
-#reset-btn,
-#next-btn {
+.reset-btn,
+.next-btn {
     color: white;
 }
 
-#reset-btn:hover,
-#next-btn:hover {
+.reset-btn:hover,
+.next-btn:hover {
     background-color: transparent;
 }
 
-#reset-btn {
+.reset-btn {
     background-color: crimson;
     color: white;
 }
 
-#next-btn {
+.next-btn {
     background-color: navy;
     margin-left: var(--size-16);
 }
 
-#next-btn:disabled {
+.next-btn:disabled {
     background-color: rgba(239, 239, 239, 0.3);
     color: rgba(16, 16, 16, 0.3);
 }

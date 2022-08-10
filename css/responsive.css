@@ -34,12 +34,12 @@
         margin: 24px;
     }
 
-    #next-reset-btns {
+    #reset-next-btns {
         display: flex;
         flex-direction: column;
     }
 
-    #next-btn {
+    .next-btn {
         margin-left: 0;
         margin-top: var(--size-16);
     }

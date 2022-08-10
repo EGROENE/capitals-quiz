@@ -65,12 +65,18 @@ const ifWrong = () => {
 
 // Function to disable 'next' button upon loading of new question:
 const disableNextBtn = () => {
-    document.getElementById('next-btn').disabled = true;
+    let nextBtns = document.getElementsByClassName('next-btn');
+    for (const nextBtn of nextBtns) {
+        nextBtn.disabled = true;
+    }
 }
 
 // Function to enable 'next' button after question has been answered:
 const enableNextBtn = () => {
-    document.getElementById('next-btn').disabled = false;
+    let nextBtns = document.getElementsByClassName('next-btn');
+    for (const nextBtn of nextBtns) {
+        nextBtn.disabled = false;
+    }
 }
 
 // REGARDING STATES' INFO:
@@ -100,8 +106,8 @@ const alabama = () => {
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[0].stateCapital + '</button>'
         + '<div id= "total-score"></div>'
         + '<div id="reset-next-btns">'
-        + '<button id="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button id="next-btn" onclick=alaska()>Next</button>'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=alaska()>Next</button>'
         + '</div>'
         + '</section>'
         disableNextBtn();
@@ -122,8 +128,8 @@ const alaska = () => {
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[1].stateCapital + '</button>'
         + '<div id= "total-score"></div>'
         + '<div id="reset-next-btns">'
-        + '<button id="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button id="next-btn">Next</button>'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn">Next</button>'
         + '</div>'
         '</section>'
     disableNextBtn();
