@@ -7,7 +7,7 @@
         margin: 48px;
     }
 
-    #display-question {
+    .display-question {
         margin: 0;
         padding: var(--size-16);
     }

@@ -10,14 +10,17 @@ const reduceHeroPadding = () => {
 }
 
 // Function to hide #display-question section initially:
-const hideQuestion = () => {
-    document.getElementById('display-question').style.display = "none";
-}
+/* const hideQuestion = () => {
+    let questions = document.getElementsByClassName('display-question');
+    for (const question of questions) {
+        question.style.display = 'none';
+    }
+} */
 
 // Function to show #display-question section upon click of 'let's go!' btn:
-const showQuestion = () => {
+/* const showQuestion = () => {
     document.getElementById('display-question').style.display = "grid";
-}
+} */
 
 // Initialize quiz score at 0:
 let totalScore = 0;
@@ -79,13 +82,17 @@ const statesInfo = [
 
 // Add a function for each state (as the correct answer will be in a different place in the order of options) that hides the previous state's function & displays the current one and updates the point total accordingly.
 // First function should hide #greeting-box; last function should display a button 'get results', which, upon click, will display a new box with the score & hide #total-score
+/* const hideAlabama = () => {
+    document.getElementById('display-question-alabama').style.display = 'none';
+} */
 const alabama = () => {
     addAnsweredQuestion();
     document.body.style.background = 'url(./assets/al-bg.jpg';
     document.body.style.backgroundSize = 'cover';
     document.getElementById('greeting-box').style.display = 'none';
-    document.getElementById('display-question').innerHTML += 
-        '<header>' + answeredStates + ' / 50</header>'
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-alabama" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[0].stateName + '?' + '</header>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionThree + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionTwo + '</button>'
@@ -94,7 +101,30 @@ const alabama = () => {
         + '<div id= "total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button id="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button id="next-btn" onclick=alaska()>Next</button>'
+        + '</div>'
+        + '</section>'
+        disableNextBtn();
+}
+
+const alaska = () => {
+    document.getElementById('display-question-alabama').style.display = 'none';
+    addAnsweredQuestion();
+    document.body.style.background = 'url(./assets/ak-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-alaska" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[1].stateName + '?' + '</header>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionThree + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionTwo + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionOne + '</button>'
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[1].stateCapital + '</button>'
+        + '<div id= "total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button id="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button id="next-btn">Next</button>'
         + '</div>'
+        '</section>'
         disableNextBtn();
 }
