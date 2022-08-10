@@ -126,5 +126,5 @@ const alaska = () => {
         + '<button id="next-btn">Next</button>'
         + '</div>'
         '</section>'
-        disableNextBtn();
+    disableNextBtn();
 }
