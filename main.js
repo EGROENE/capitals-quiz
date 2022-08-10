@@ -9,19 +9,6 @@ const reduceHeroPadding = () => {
     document.getElementById('hero').style.padding = '16px';
 }
 
-// Function to hide #display-question section initially:
-/* const hideQuestion = () => {
-    let questions = document.getElementsByClassName('display-question');
-    for (const question of questions) {
-        question.style.display = 'none';
-    }
-} */
-
-// Function to show #display-question section upon click of 'let's go!' btn:
-/* const showQuestion = () => {
-    document.getElementById('display-question').style.display = "grid";
-} */
-
 // Initialize quiz score at 0:
 let totalScore = 0;
 
@@ -88,16 +75,24 @@ const enableNextBtn = () => {
 // Add array of objects, each of which contain states' info:
 const statesInfo = [
     { stateName: "Alabama", stateCapital: "Montgomery", wrongOptionOne: "Tuscaloosa", wrongOptionTwo: "Mobile", wrongOptionThree: "Huntsville" },
-    { stateName: "Alaska", stateCapital: "Juneau", wrongOptionOne: "Anchorage", wrongOptionTwo: "Barrow", wrongOptionThree: "Naknek" }
+    { stateName: "Alaska", stateCapital: "Juneau", wrongOptionOne: "Anchorage", wrongOptionTwo: "Barrow", wrongOptionThree: "Naknek" },
+    { stateName: "Arizona", stateCapital: "Phoenix", wrongOptionOne: "Yuma", wrongOptionTwo: "Flagstaff", wrongOptionThree: "Scottsdale" }
 ]
 
 // Add a function for each state (as the correct answer will be in a different place in the order of options) that hides the previous state's function & displays the current one and updates the point total accordingly.
 // First function should hide #greeting-box; last function should display a button 'get results', which, upon click, will display a new box with the score & hide #total-score
 const alabama = () => {
+    // Add one to total of answeredStates variable (line 31):
     addAnsweredQuestion();
+
+    // Change background, any additional styling:
     document.body.style.background = 'url(./assets/al-bg.jpg';
     document.body.style.backgroundSize = 'cover';
+
+    // Make #greeting-box from initial loading of page, disappear:
     document.getElementById('greeting-box').style.display = 'none';
+
+    // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-alabama" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
@@ -112,14 +107,23 @@ const alabama = () => {
         + '<button class="next-btn" onclick=alaska()>Next</button>'
         + '</div>'
         + '</section>'
+
+        // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
         disableNextBtn();
 }
 
 const alaska = () => {
+    // Hide previous state:
     document.getElementById('display-question-alabama').style.display = 'none';
+    
+    // Add one to total of answeredStates variable (line 31):
     addAnsweredQuestion();
+
+    // Change background, any additional styling:
     document.body.style.background = 'url(./assets/ak-bg.jpg';
     document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-alaska" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
@@ -131,8 +135,41 @@ const alaska = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=arizona()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const arizona = () => {
+    // Hide previous state:
+    document.getElementById('display-question-alaska').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/az-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-arizona" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[2].stateName + '?' + '</header>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[2].wrongOptionThree + '</button>'        
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[2].stateCapital + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[2].wrongOptionTwo + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[2].wrongOptionOne + '</button>'
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button class="next-btn">Next</button>'
         + '</div>'
         '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
     disableNextBtn();
 }
