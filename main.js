@@ -93,9 +93,6 @@ const statesInfo = [
 
 // Add a function for each state (as the correct answer will be in a different place in the order of options) that hides the previous state's function & displays the current one and updates the point total accordingly.
 // First function should hide #greeting-box; last function should display a button 'get results', which, upon click, will display a new box with the score & hide #total-score
-/* const hideAlabama = () => {
-    document.getElementById('display-question-alabama').style.display = 'none';
-} */
 const alabama = () => {
     addAnsweredQuestion();
     document.body.style.background = 'url(./assets/al-bg.jpg';
