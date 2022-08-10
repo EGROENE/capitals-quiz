@@ -85,7 +85,8 @@ const alabama = () => {
     document.body.style.backgroundSize = 'cover';
     document.getElementById('greeting-box').style.display = 'none';
     document.getElementById('display-question').innerHTML += 
-        '<header>What\'s the capital of ' + statesInfo[0].stateName + '?' + '</header>'
+        '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[0].stateName + '?' + '</header>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionThree + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionTwo + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionOne + '</button>'
