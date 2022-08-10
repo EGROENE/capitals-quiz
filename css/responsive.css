@@ -6,6 +6,11 @@
     #greeting-box {
         margin: 48px;
     }
+
+    #display-question {
+        margin: 0;
+        padding: var(--size-16);
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -27,5 +32,15 @@
 
     #greeting-box {
         margin: 24px;
+    }
+
+    #next-reset-btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #next-btn {
+        margin-left: 0;
+        margin-top: var(--size-16);
     }
 }
