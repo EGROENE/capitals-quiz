@@ -63,7 +63,7 @@
 }
 
 .display-question header,
-#total-score {
+.total-score {
     font-family: 'Aref Ruqaa', serif;
     font-size: var(--size-32);
 }
@@ -82,7 +82,7 @@
     border: var(--size-4) solid white;
 }
 
-#total-score {
+.total-score {
     font-size: var(--size-24);
 }
 

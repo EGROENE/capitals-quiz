@@ -50,8 +50,10 @@ const ifCorrect = () => {
         option.disabled = true;
     }
     totalScore += 1;
-    document.getElementById('total-score').innerHTML = 'That\'s correct! Total for the round is: ' + totalScore + ' / ' + answeredStates;
-
+    let scores = document.getElementsByClassName('total-score');
+    for (const score of scores) {
+        score.innerHTML = 'That\'s correct! Total for the round is: ' + totalScore + ' / ' + answeredStates;
+    }
 }
 
 // Function to add zero to point total if any wrong option is selected (run on click of these buttons):
@@ -60,7 +62,10 @@ const ifWrong = () => {
         option.disabled = true;
     }
     totalScore += 0;
-    document.getElementById('total-score').innerHTML = 'Nope! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
+    let scores = document.getElementsByClassName('total-score');
+    for (const score of scores) {
+        score.innerHTML = 'Nope! Total for the round is: ' + totalScore + ' / ' + answeredStates;
+    }
 }
 
 // Function to disable 'next' button upon loading of new question:
@@ -104,7 +109,7 @@ const alabama = () => {
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionTwo + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionOne + '</button>'
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[0].stateCapital + '</button>'
-        + '<div id= "total-score"></div>'
+        + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button class="next-btn" onclick=alaska()>Next</button>'
@@ -126,7 +131,7 @@ const alaska = () => {
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionTwo + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionOne + '</button>'
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[1].stateCapital + '</button>'
-        + '<div id= "total-score"></div>'
+        + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button class="next-btn">Next</button>'
