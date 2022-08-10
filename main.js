@@ -39,7 +39,7 @@ const ifCorrect = () => {
     totalScore += 1;
     let scores = document.getElementsByClassName('total-score');
     for (const score of scores) {
-        score.innerHTML = 'That\'s correct! Total for the round is: ' + totalScore + ' / ' + answeredStates;
+        score.innerHTML = 'That\'s correct! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
     }
 }
 
@@ -51,7 +51,7 @@ const ifWrong = () => {
     totalScore += 0;
     let scores = document.getElementsByClassName('total-score');
     for (const score of scores) {
-        score.innerHTML = 'Nope! Total for the round is: ' + totalScore + ' / ' + answeredStates;
+        score.innerHTML = 'Nope! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
     }
 }
 
@@ -76,7 +76,8 @@ const enableNextBtn = () => {
 const statesInfo = [
     { stateName: "Alabama", stateCapital: "Montgomery", wrongOptionOne: "Tuscaloosa", wrongOptionTwo: "Mobile", wrongOptionThree: "Huntsville" },
     { stateName: "Alaska", stateCapital: "Juneau", wrongOptionOne: "Anchorage", wrongOptionTwo: "Barrow", wrongOptionThree: "Naknek" },
-    { stateName: "Arizona", stateCapital: "Phoenix", wrongOptionOne: "Yuma", wrongOptionTwo: "Flagstaff", wrongOptionThree: "Scottsdale" }
+    { stateName: "Arizona", stateCapital: "Phoenix", wrongOptionOne: "Yuma", wrongOptionTwo: "Flagstaff", wrongOptionThree: "Scottsdale" },
+    { stateName: "Arkansas", stateCapital: "Little Rock", wrongOptionOne: "Springfield", wrongOptionTwo: "Eureka Springs", wrongOptionThree: "Fayetteville" }
 ]
 
 // Add a function for each state (as the correct answer will be in a different place in the order of options) that hides the previous state's function & displays the current one and updates the point total accordingly.
@@ -163,6 +164,37 @@ const arizona = () => {
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[2].stateCapital + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[2].wrongOptionTwo + '</button>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[2].wrongOptionOne + '</button>'
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=arkansas()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const arkansas = () => {
+    // Hide previous state:
+    document.getElementById('display-question-arizona').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/ar-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-arkansas" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[3].stateName + '?' + '</header>'
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[3].stateCapital + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[3].wrongOptionThree + '</button>'        
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[3].wrongOptionTwo + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[3].wrongOptionOne + '</button>'
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
