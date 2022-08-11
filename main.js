@@ -81,7 +81,7 @@ const statesInfo = [
     { stateName: "California", stateCapital: "Sacramento", wrongOptionOne: "Los Angeles", wrongOptionTwo: "San Diego", wrongOptionThree: "Pacific Palisades" },
     { stateName: "Colorado", stateCapital: "Denver", wrongOptionOne: "Fort Collins", wrongOptionTwo: "Boulder", wrongOptionThree: "Loveland" },
     { stateName: "Connecticut", stateCapital: "Hartford", wrongOptionOne: "Bridgeport", wrongOptionTwo: "Bristol", wrongOptionThree: "Norwalk" },
-    { stateName: "Delaware", stateCapital: "Dover", wrongOptionOne: "Wilmington", wrongOptionTwo: "Swyrna", wrongOptionThree: "Seaford" },
+    { stateName: "Delaware", stateCapital: "Dover", wrongOptionOne: "Wilmington", wrongOptionTwo: "Smyrna", wrongOptionThree: "Seaford" },
     { stateName: "Florida", stateCapital: "Tallahassee", wrongOptionOne: "Jacksonville", wrongOptionTwo: "Miami", wrongOptionThree: "Gainesville" },
     { stateName: "Georgia", stateCapital: "Atlanta", wrongOptionOne: "Savannah", wrongOptionTwo: "Athens", wrongOptionThree: "Augusta" },
     { stateName: "Hawaii", stateCapital: "Honolulu", wrongOptionOne: "Pearl Harbor", wrongOptionTwo: "Waipahu", wrongOptionThree: "Kailua" },
