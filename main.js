@@ -83,7 +83,12 @@ const statesInfo = [
     { stateName: "Connecticut", stateCapital: "Hartford", wrongOptionOne: "Bridgeport", wrongOptionTwo: "Bristol", wrongOptionThree: "Norwalk" },
     { stateName: "Delaware", stateCapital: "Dover", wrongOptionOne: "Wilmington", wrongOptionTwo: "Swyrna", wrongOptionThree: "Seaford" },
     { stateName: "Florida", stateCapital: "Tallahassee", wrongOptionOne: "Jacksonville", wrongOptionTwo: "Miami", wrongOptionThree: "Gainesville" },
-    { stateName: "Georgia", stateCapital: "Atlanta", wrongOptionOne: "Savannah", wrongOptionTwo: "Athens", wrongOptionThree: "Augusta" }
+    { stateName: "Georgia", stateCapital: "Atlanta", wrongOptionOne: "Savannah", wrongOptionTwo: "Athens", wrongOptionThree: "Augusta" },
+    { stateName: "Hawaii", stateCapital: "Honolulu", wrongOptionOne: "Pearl Harbor", wrongOptionTwo: "Waipahu", wrongOptionThree: "Kailua" },
+    { stateName: "Idaho", stateCapital: "Boise", wrongOptionOne: "Twin Falls", wrongOptionTwo: "Caldwell", wrongOptionThree: "Nampa" },
+    { stateName: "Illinois", stateCapital: "Springfield", wrongOptionOne: "Chicago", wrongOptionTwo: "Joliet", wrongOptionThree: "Aurora" },
+    { stateName: "Indiana", stateCapital: "Indianapolis", wrongOptionOne: "Shipshewana", wrongOptionTwo: "South Bend", wrongOptionThree: "Gary" },
+    { stateName: "Iowa", stateCapital: "Des Moines", wrongOptionOne: "Iowa City", wrongOptionTwo: "Council Bluffs", wrongOptionThree: "Cedar Rapids" }
 ]
 
 // Add a function for each state (as the correct answer will be in a different place in the order of options) that hides the previous state's function & displays the current one and updates the point total accordingly.
