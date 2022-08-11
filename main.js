@@ -747,6 +747,37 @@ const massachusetts = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=michigan()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const michigan = () => {
+    // Hide previous state:
+    document.getElementById('display-question-massachusetts').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/mi-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-massachusetts" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[21].stateName + '?' + '</header>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[21].wrongOptionOne + '</button>'
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[21].stateCapital + '</button>'       
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[21].wrongOptionTwo + '</button>'        
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[21].wrongOptionThree + '</button>'
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
         + '<button class="next-btn">Next</button>'
         + '</div>'
         '</section>'
