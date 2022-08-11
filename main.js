@@ -511,7 +511,7 @@ const indiana = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-iowa" class="display-question">'
+        '<section id="display-question-indiana" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[13].stateName + '?' + '</header>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[13].wrongOptionThree + '</button>'
