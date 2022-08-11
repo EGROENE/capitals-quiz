@@ -681,7 +681,37 @@ const maine = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn" onclick=massachusetts()>Next</button>'
+        + '<button class="next-btn" onclick=maryland()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const maryland = () => {
+    // Hide previous state:
+    document.getElementById('display-question-maryland').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/md-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-maryland" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[19].stateName + '?' + '</header>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionThree + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionTwo + '</button>'        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[19].stateCapital + '</button>'       
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionOne + '</button>'
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn">Next</button>'
         + '</div>'
         '</section>'
 
