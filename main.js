@@ -691,7 +691,7 @@ const maine = () => {
 
 const maryland = () => {
     // Hide previous state:
-    document.getElementById('display-question-maryland').style.display = 'none';
+    document.getElementById('display-question-maine').style.display = 'none';
     
     // Add one to total of answeredStates variable:
     addAnsweredQuestion();
