@@ -830,7 +830,7 @@ const mississippi = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-missouri" class="display-question">'
+        '<section id="display-question-mississippi" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[23].stateName + '?' + '</header>'
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[23].stateCapital + '</button>'       
