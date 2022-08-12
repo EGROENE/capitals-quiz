@@ -103,7 +103,12 @@ const statesInfo = [
     { stateName: "Nebraska", stateCapital: "Lincoln", wrongOptionOne: "Omaha", wrongOptionTwo: "Bellevue", wrongOptionThree: "Papillion" },
     { stateName: "Nevada", stateCapital: "Carson City", wrongOptionOne: "Reno", wrongOptionTwo: "Las Vegas", wrongOptionThree: "Sparks" },
     { stateName: "New Hampshire", stateCapital: "Concord", wrongOptionOne: "Manchester", wrongOptionTwo: "Portsmouth", wrongOptionThree: "Derry" },
-    { stateName: "New Jersey", stateCapital: "Trenton", wrongOptionOne: "Newark", wrongOptionTwo: "Garden City", wrongOptionThree: "Rutherford" }
+    { stateName: "New Jersey", stateCapital: "Trenton", wrongOptionOne: "Newark", wrongOptionTwo: "Garden City", wrongOptionThree: "Rutherford" },
+    { stateName: "New Mexico", stateCapital: "Santa Fe", wrongOptionOne: "Albuquerque", wrongOptionTwo: "Las Cruces" , wrongOptionThree: "Roswell" },
+    { stateName: "New York", stateCapital: "Albany", wrongOptionOne: "Manhattan", wrongOptionTwo: "Syracuse", wrongOptionThree: "Staten Island" },
+    { stateName: "North Carolina", stateCapital: "Raleigh", wrongOptionOne: "Charlotte", wrongOptionTwo: "Chapel Hill", wrongOptionThree: "Greensboro" },
+    { stateName: "North Dakota", stateCapital: "Bismarck", wrongOptionOne: "Fargo", wrongOptionTwo: "Mandan", wrongOptionThree: "Grand Forks" },
+    { stateName: "Ohio", stateCapital: "Columbus", wrongOptionOne: "Cincinnati", wrongOptionTwo: "Cleveland", wrongOptionThree: "Youngstown" }
 ]
 
 // STATE FUNCTIONS
