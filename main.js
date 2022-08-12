@@ -1021,7 +1021,7 @@ const newJersey = () => {
     addAnsweredQuestion();
 
     // Change background, any additional styling:
-    document.body.style.background = 'url(./assets/nh-bg.jpg';
+    document.body.style.background = 'url(./assets/nj-bg.jpg';
     document.body.style.backgroundSize = 'cover';
 
     // Add HTML for current state:
@@ -1033,6 +1033,37 @@ const newJersey = () => {
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[29].wrongOptionTwo + '</button>'        
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[29].wrongOptionThree + '</button>'        
         + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[29].stateCapital + '</button>'       
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=newMexico()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const newMexico = () => {
+    // Hide previous state:
+    document.getElementById('display-question-new-jersey').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/nm-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-new-mexico" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[30].stateName + '?' + '</header>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[30].wrongOptionOne + '</button>'
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[30].wrongOptionTwo + '</button>'        
+        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[30].wrongOptionThree + '</button>'        
+        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[30].stateCapital + '</button>'       
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
