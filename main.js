@@ -1135,7 +1135,7 @@ const northCarolina = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn" oneclick=northDakota()>Next</button>'
+        + '<button class="next-btn" onclick=northDakota()>Next</button>'
         + '</div>'
         '</section>'
 
