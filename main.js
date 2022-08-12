@@ -1187,7 +1187,7 @@ const ohio = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-north-dakota" class="display-question">'
+        '<section id="display-question-ohio" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[34].stateName + '?' + '</header>'
         + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[34].wrongOptionOne + '</button>'
