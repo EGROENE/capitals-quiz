@@ -108,7 +108,12 @@ const statesInfo = [
     { stateName: "New York", stateCapital: "Albany", wrongOptionOne: "Manhattan", wrongOptionTwo: "Syracuse", wrongOptionThree: "Staten Island" },
     { stateName: "North Carolina", stateCapital: "Raleigh", wrongOptionOne: "Charlotte", wrongOptionTwo: "Chapel Hill", wrongOptionThree: "Greensboro" },
     { stateName: "North Dakota", stateCapital: "Bismarck", wrongOptionOne: "Fargo", wrongOptionTwo: "Mandan", wrongOptionThree: "Grand Forks" },
-    { stateName: "Ohio", stateCapital: "Columbus", wrongOptionOne: "Cincinnati", wrongOptionTwo: "Cleveland", wrongOptionThree: "Youngstown" }
+    { stateName: "Oklahoma", stateCapital: "Oklahoma City", wrongOptionOne: "Tulsa", wrongOptionTwo: "Broken Arrow", wrongOptionThree: "Comanche" },
+    { stateName: "Oregon", stateCapital: "Salem", wrongOptionOne: "Portland", wrongOptionTwo: "Medford" , wrongOptionThree: "McMinnville" },
+    { stateName: "Pennsylvania", stateCapital: "Harrisburg", wrongOptionOne: "Pittsburgh", wrongOptionTwo: "King of Prussia", wrongOptionThree: "Philadelphia" },
+    { stateName: "Rhode Island", stateCapital: "Providence", wrongOptionOne: "Warwick", wrongOptionTwo: "Pawtucket", wrongOptionThree: "Newport" },
+    { stateName: "South Carolina", stateCapital: "Columbia", wrongOptionOne: "Charleston", wrongOptionTwo: "Myrtle Beach", wrongOptionThree: "Greensboro" },
+    { stateName: "South Dakota", stateCapital: "Pierre", wrongOptionOne: "Brookings", wrongOptionTwo: "Sioux Falls", wrongOptionThree: "Big Stone City" }
 ]
 
 // STATE FUNCTIONS
