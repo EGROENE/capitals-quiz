@@ -881,7 +881,7 @@ const missouri = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn" onclick="montana()>Next</button>'
+        + '<button class="next-btn" onclick=montana()>Next</button>'
         + '</div>'
         '</section>'
 
@@ -943,7 +943,7 @@ const nebraska = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn onclick=nevada(">Next</button>'
+        + '<button class="next-btn" onclick=nevada()>Next</button>'
         + '</div>'
         '</section>'
 
