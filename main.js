@@ -98,7 +98,12 @@ const statesInfo = [
     { stateName: "Michigan", stateCapital: "Lansing", wrongOptionOne: "Grand Rapids", wrongOptionTwo: "Detroit", wrongOptionThree: "Traverse City" },
     { stateName: "Minnesota", stateCapital: "St. Paul", wrongOptionOne: "Minneapolis", wrongOptionTwo: "Duluth", wrongOptionThree: "Rochester" },
     { stateName: "Mississippi", stateCapital: "Jackson", wrongOptionOne: "Biloxi", wrongOptionTwo: "Hattiesburg", wrongOptionThree: "Tupelo" },
-    { stateName: "Missouri", stateCapital: "Jefferson City", wrongOptionOne: "Springfield", wrongOptionTwo: "Kansas City", wrongOptionThree: "Hannibal" }
+    { stateName: "Missouri", stateCapital: "Jefferson City", wrongOptionOne: "Springfield", wrongOptionTwo: "Kansas City", wrongOptionThree: "Hannibal" },
+    { stateName: "Montana", stateCapital: "Helena", wrongOptionOne: "Big Sky", wrongOptionTwo: "Billings" , wrongOptionThree: "Bozeman" },
+    { stateName: "Nebraska", stateCapital: "Lincoln", wrongOptionOne: "Omaha", wrongOptionTwo: "Bellevue", wrongOptionThree: "Papillion" },
+    { stateName: "Nevada", stateCapital: "Carson City", wrongOptionOne: "Reno", wrongOptionTwo: "Las Vegas", wrongOptionThree: "Sparks" },
+    { stateName: "New Hampshire", stateCapital: "Concord", wrongOptionOne: "Manchester", wrongOptionTwo: "Portsmouth", wrongOptionThree: "Derry" },
+    { stateName: "New Jersey", stateCapital: "Trenton", wrongOptionOne: "Newark", wrongOptionTwo: "Garden City", wrongOptionThree: "Rutherford" }
 ]
 
 // STATE FUNCTIONS
