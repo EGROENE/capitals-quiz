@@ -117,11 +117,46 @@ const statesInfo = [
     { stateName: "South Dakota", stateCapital: "Pierre", wrongOptionOne: "Brookings", wrongOptionTwo: "Sioux Falls", wrongOptionThree: "Big Stone City" }
 ]
 
+// RANDOMIZE OPTIONS:
+// Initialize statesInfoIndex variable, to be used as param in randomizeOptions array and increased by one w/ each state:
+let statesInfoIndex = -1;
+const incrementStatesInfoIndex = () => {
+    statesInfoIndex += 1;
+}
+
+// Initialize stateOptions array. This is the container for each state's options, whose indices will be used to populate the HTML:
+const stateOptions = [];
+
+const randomizeOptions = (statesInfoIndex) => {
+    let optionsArray = [
+        ('<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[statesInfoIndex].wrongOptionOne + '</button>'),
+        ('<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[statesInfoIndex].wrongOptionTwo + '</button>'),
+        ('<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[statesInfoIndex].wrongOptionThree + '</button>'),
+        ('<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[statesInfoIndex].stateCapital + '</button>')
+    ]
+
+    for (const option of optionsArray) {
+        stateOptions.push(option);
+    }
+    console.log(stateOptions);
+
+    for (let i = 1; i < stateOptions.length; i++) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [stateOptions[i], stateOptions[j]] = [stateOptions[j], stateOptions[i]];
+    }
+}
+
 // STATE FUNCTIONS
-/* I decided to create a separate function for each state in accordance with the Single-Responsibility Principle, which makes debugging easier. I also did so to order the wrong/correct answers differently for each question & because some functions have unique operations. */
+/* I decided to create a separate function for each state in accordance with the Single-Responsibility Principle, which makes debugging easier &  because some functions have unique operations and styling. */
 const alabama = () => {
     // Add one to total of answeredStates variable (line 31):
     addAnsweredQuestion();
+
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
 
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/al-bg.jpg';
@@ -134,11 +169,11 @@ const alabama = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-alabama" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[0].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionThree + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionTwo + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[0].wrongOptionOne + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[0].stateCapital + '</button>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
