@@ -1940,7 +1940,7 @@ const vermont = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-utah" class="display-question">'
+        '<section id="display-question-vermont" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
