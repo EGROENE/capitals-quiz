@@ -1,4 +1,4 @@
-// Function to set background upon loading of page:
+// Function to set background upon initial loading of page:
 const setInitialBackground = () => {
     document.body.style.background = 'url(./assets/initial-bg.jpg)';
     document.body.style.backgroundSize = 'cover';
@@ -55,7 +55,7 @@ const ifWrong = () => {
     }
 }
 
-// Function to disable 'next' button upon loading of new question:
+// Function to disable 'next' button upon loading of new question (run on click of 'Next' button of previous question):
 const disableNextBtn = () => {
     let nextBtns = document.getElementsByClassName('next-btn');
     for (const nextBtn of nextBtns) {
@@ -63,7 +63,7 @@ const disableNextBtn = () => {
     }
 }
 
-// Function to enable 'next' button after question has been answered:
+// Function to enable 'next' button (to be run upon click of any and all options):
 const enableNextBtn = () => {
     let nextBtns = document.getElementsByClassName('next-btn');
     for (const nextBtn of nextBtns) {
@@ -144,10 +144,12 @@ const randomizeOptions = (statesInfoIndex) => {
         ('<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[statesInfoIndex].stateCapital + '</button>')
     ]
 
+    // Push state's options to stateOptions; these options will populate HTML.
     for (const option of optionsArray) {
         stateOptions.push(option);
     }
 
+    // Loop to randomly order items in optionsArray:
     for (let i = 1; i < stateOptions.length; i++) {
         const j = Math.floor(Math.random() * (i + 1));
         [stateOptions[i], stateOptions[j]] = [stateOptions[j], stateOptions[i]];
