@@ -2110,7 +2110,47 @@ const wisconsin = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn" onclick=wisconsin()>Next</button>'
+        + '<button class="next-btn" onclick=wyoming()>Next</button>'
+        + '</div>'
+        '</section>'
+
+    // Disable 'next' btn upon loading of current state (enabled upon clicking of any of the answer buttons):
+    disableNextBtn();
+}
+
+const wyoming = () => {
+    // Hide previous state:
+    document.getElementById('display-question-wisconsin').style.display = 'none';
+    
+    // Add one to total of answeredStates variable:
+    addAnsweredQuestion();
+
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
+    // Change background, any additional styling:
+    document.body.style.background = 'url(./assets/wy-bg.jpg';
+    document.body.style.backgroundSize = 'cover';
+
+    // Add HTML for current state:
+    document.getElementById('hero').innerHTML += 
+        '<section id="display-question-wyoming" class="display-question">'
+        + '<header>' + answeredStates + ' / 50</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]        
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn">Next</button>'
         + '</div>'
         '</section>'
 
