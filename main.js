@@ -1980,7 +1980,7 @@ const virginia = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-utah" class="display-question">'
+        '<section id="display-question-virginia" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
@@ -2020,7 +2020,7 @@ const washington = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-utah" class="display-question">'
+        '<section id="display-question-washington" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
@@ -2060,7 +2060,7 @@ const westVirginia = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-utah" class="display-question">'
+        '<section id="display-question-west-virginia" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
@@ -2100,7 +2100,7 @@ const wisconsin = () => {
 
     // Add HTML for current state:
     document.getElementById('hero').innerHTML += 
-        '<section id="display-question-utah" class="display-question">'
+        '<section id="display-question-wisconsin" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
