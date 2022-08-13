@@ -138,7 +138,6 @@ const randomizeOptions = (statesInfoIndex) => {
     for (const option of optionsArray) {
         stateOptions.push(option);
     }
-    console.log(stateOptions);
 
     for (let i = 1; i < stateOptions.length; i++) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -146,7 +145,7 @@ const randomizeOptions = (statesInfoIndex) => {
     }
 }
 
-// EMPTY OUT stateOptions array (with each state, so it only contains its own four options):
+// EMPTY OUT stateOptions array (with each state, starting w/ alaska(), so it only contains its own four options):
 const emptyStateOptions = () => stateOptions = [];
 
 // STATE FUNCTIONS
