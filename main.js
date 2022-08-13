@@ -2160,3 +2160,32 @@ const wyoming = () => {
     disableNextBtn();
 }
 // END OF STATE FUNCTIONS
+
+// Function to display results page (run on click of 'Get Results!' btn in wyoming()):
+const getResults = () => {
+    // Hide last state:
+    document.getElementById('display-question-wyoming').style.display = 'none';
+
+    // Change background:
+    setInitialBackground();
+
+    // Logic giving feedback and score:
+    let feedbackAndScore = '';
+    switch(totalScore) {
+        case totalScore === 50:
+            feedbackAndScore = "You got a perfect score! You must be really smart.";
+            break;
+        case totalScore >= 45 && totalScore < 50:
+            feedbackAndScore = `Well done! Your score was ${totalScore} / 50.`;
+            break;
+        case totalScore >= 30 && totalScore < 45:
+            feedbackAndScore = `Not too bad, but could've been better. Your score was ${totalScore} / 50.`
+            break;
+    }
+
+    // Add HTML displaying round score:
+    document.getElementById('hero').innerHTML +=
+    '<div id="results-box">'
+    '<h1>Thanks for taking the quiz!</h1>'
+    + '<p>' + feedbackAndScore + '<p>'
+}
