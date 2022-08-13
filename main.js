@@ -125,7 +125,7 @@ const incrementStatesInfoIndex = () => {
 }
 
 // Initialize stateOptions array. This is the container for each state's options, whose indices will be used to populate the HTML:
-const stateOptions = [];
+let stateOptions = [];
 
 const randomizeOptions = (statesInfoIndex) => {
     let optionsArray = [
@@ -145,6 +145,9 @@ const randomizeOptions = (statesInfoIndex) => {
         [stateOptions[i], stateOptions[j]] = [stateOptions[j], stateOptions[i]];
     }
 }
+
+// EMPTY OUT stateOptions array (with each state, so it only contains its own four options):
+const emptyStateOptions = () => stateOptions = [];
 
 // STATE FUNCTIONS
 /* I decided to create a separate function for each state in accordance with the Single-Responsibility Principle, which makes debugging easier &  because some functions have unique operations and styling. */
@@ -192,6 +195,15 @@ const alaska = () => {
     // Add one to total of answeredStates variable (line 31):
     addAnsweredQuestion();
 
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/ak-bg.jpg';
     document.body.style.backgroundSize = 'cover';
@@ -200,11 +212,11 @@ const alaska = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-alaska" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[1].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionThree + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionTwo + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[1].wrongOptionOne + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[1].stateCapital + '</button>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
