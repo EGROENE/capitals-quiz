@@ -756,6 +756,15 @@ const kansas = () => {
     // Add one to total of answeredStates variable:
     addAnsweredQuestion();
 
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/ks-bg.jpg';
     document.body.style.backgroundSize = 'cover';
@@ -765,14 +774,10 @@ const kansas = () => {
         '<section id="display-question-kansas" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[15].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[15].wrongOptionThree + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[15].wrongOptionTwo + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[15].stateCapital + '</button>'       
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[15].wrongOptionOne + '</button>'
-        + '<div class="total-score"></div>'
-        + '<div id="reset-next-btns">'
-        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn" onclick=kentucky()>Next</button>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '</div>'
         '</section>'
 
@@ -787,6 +792,15 @@ const kentucky = () => {
     // Add one to total of answeredStates variable:
     addAnsweredQuestion();
 
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/ky-bg.jpg';
     document.body.style.backgroundSize = 'cover';
@@ -796,10 +810,10 @@ const kentucky = () => {
         '<section id="display-question-kentucky" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[16].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[16].wrongOptionThree + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[16].stateCapital + '</button>'       
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[16].wrongOptionTwo + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[16].wrongOptionOne + '</button>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
