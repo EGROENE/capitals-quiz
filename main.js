@@ -778,6 +778,10 @@ const kansas = () => {
         + stateOptions[1]
         + stateOptions[2]
         + stateOptions[3]
+        + '<div class="total-score"></div>'
+        + '<div id="reset-next-btns">'
+        + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
+        + '<button class="next-btn" onclick=kentucky()>Next</button>'
         + '</div>'
         '</section>'
 
