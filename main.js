@@ -912,6 +912,15 @@ const maryland = () => {
     // Add one to total of answeredStates variable:
     addAnsweredQuestion();
 
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/md-bg.jpg';
     document.body.style.backgroundSize = 'cover';
@@ -921,9 +930,10 @@ const maryland = () => {
         '<section id="display-question-maryland" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
         + '<header>What\'s the capital of ' + statesInfo[19].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionThree + '</button>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionTwo + '</button>'        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[19].stateCapital + '</button>'       
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[19].wrongOptionOne + '</button>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
