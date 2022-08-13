@@ -1156,6 +1156,15 @@ const montana = () => {
     // Add one to total of answeredStates variable:
     addAnsweredQuestion();
 
+    // Increase statesInfoIndex by 1:
+    incrementStatesInfoIndex();
+
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
+    emptyStateOptions();
+
+    // Function to randomize options:
+    randomizeOptions(statesInfoIndex);
+
     // Change background, any additional styling:
     document.body.style.background = 'url(./assets/mt-bg.jpg';
     document.body.style.backgroundSize = 'cover';
@@ -1164,11 +1173,11 @@ const montana = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-montana" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[25].stateName + '?' + '</header>'
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[25].wrongOptionOne + '</button>'
-        + '<button class= "option" id="correct-option" onclick=ifCorrect();enableNextBtn()>' + statesInfo[25].stateCapital + '</button>'       
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[25].wrongOptionTwo + '</button>'        
-        + '<button class="option wrong-option" onclick=ifWrong();enableNextBtn()>' + statesInfo[25].wrongOptionThree + '</button>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
+        + stateOptions[0]
+        + stateOptions[1]
+        + stateOptions[2]
+        + stateOptions[3]
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
