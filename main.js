@@ -251,7 +251,7 @@ const arizona = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-arizona" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[2].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -291,7 +291,7 @@ const arkansas = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-arkansas" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[3].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -331,7 +331,7 @@ const california = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-california" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[4].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -371,7 +371,7 @@ const colorado = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-colorado" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[5].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -412,7 +412,7 @@ const connecticut = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-connecticut" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[6].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -453,7 +453,7 @@ const delaware = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-delaware" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[7].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -493,7 +493,7 @@ const florida = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-florida" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[8].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -533,7 +533,7 @@ const georgia = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-georgia" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[9].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -573,7 +573,7 @@ const hawaii = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-hawaii" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[10].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -613,7 +613,7 @@ const idaho = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-idaho" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[11].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -653,7 +653,7 @@ const illinois = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-illinois" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[12].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -693,7 +693,7 @@ const indiana = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-indiana" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[13].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -733,7 +733,7 @@ const iowa = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-iowa" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[14].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -773,7 +773,7 @@ const kansas = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-kansas" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[15].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -813,7 +813,7 @@ const kentucky = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-kentucky" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[16].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -853,7 +853,7 @@ const louisiana = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-louisiana" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[17].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -893,7 +893,7 @@ const maine = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-maine" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[18].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -933,7 +933,7 @@ const maryland = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-maryland" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[19].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -973,7 +973,7 @@ const massachusetts = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-massachusetts" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[20].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -1013,7 +1013,7 @@ const michigan = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-michigan" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[21].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
@@ -1053,7 +1053,7 @@ const minnesota = () => {
     document.getElementById('hero').innerHTML += 
         '<section id="display-question-minnesota" class="display-question">'
         + '<header>' + answeredStates + ' / 50</header>'
-        + '<header>What\'s the capital of ' + statesInfo[22].stateName + '?' + '</header>'
+        + '<header>What\'s the capital of ' + statesInfo[statesInfoIndex].stateName + '?' + '</header>'
         + stateOptions[0]
         + stateOptions[1]
         + stateOptions[2]
