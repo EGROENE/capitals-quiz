@@ -114,7 +114,16 @@ const statesInfo = [
     { stateName: "Pennsylvania", stateCapital: "Harrisburg", wrongOptionOne: "Pittsburgh", wrongOptionTwo: "King of Prussia", wrongOptionThree: "Philadelphia" },
     { stateName: "Rhode Island", stateCapital: "Providence", wrongOptionOne: "Warwick", wrongOptionTwo: "Pawtucket", wrongOptionThree: "Newport" },
     { stateName: "South Carolina", stateCapital: "Columbia", wrongOptionOne: "Charleston", wrongOptionTwo: "Myrtle Beach", wrongOptionThree: "Greensboro" },
-    { stateName: "South Dakota", stateCapital: "Pierre", wrongOptionOne: "Brookings", wrongOptionTwo: "Sioux Falls", wrongOptionThree: "Big Stone City" }
+    { stateName: "South Dakota", stateCapital: "Pierre", wrongOptionOne: "Brookings", wrongOptionTwo: "Sioux Falls", wrongOptionThree: "Big Stone City" },
+    { stateName: "Tennessee", stateCapital: "Nashville", wrongOptionOne: "Gatlinburg", wrongOptionTwo: "Memphis" , wrongOptionThree: "Dollywood" },
+    { stateName: "Texas", stateCapital: "Austin", wrongOptionOne: "Houston", wrongOptionTwo: "San Antonio", wrongOptionThree: "Dallas" },
+    { stateName: "Utah", stateCapital: "Salt Lake City", wrongOptionOne: "Provo", wrongOptionTwo: "Ogden", wrongOptionThree: "South Jordan" },
+    { stateName: "Vermont", stateCapital: "Montpelier", wrongOptionOne: "Burlington", wrongOptionTwo: "Winooski", wrongOptionThree: "Concord" },
+    { stateName: "Virginia", stateCapital: "Richmond", wrongOptionOne: "Virginia Beach", wrongOptionTwo: "Chesapeake", wrongOptionThree: "Alexandria" },
+    { stateName: "Washington", stateCapital: "Olympia", wrongOptionOne: "Seattle", wrongOptionTwo: "Tacoma", wrongOptionThree: "Linden" },
+    { stateName: "West Virginia", stateCapital: "Charleston", wrongOptionOne: "Morgantown", wrongOptionTwo: "Wheeling", wrongOptionThree: "Clarkston" },
+    { stateName: "Wisconsin", stateCapital: "Madison", wrongOptionOne: "Milwaukee", wrongOptionTwo: "Green Bay", wrongOptionThree: "Fond du Lac" },
+    { stateName: "Wyoming", stateCapital: "Cheyenne", wrongOptionOne: "Jackson Hole", wrongOptionTwo: "Casper", wrongOptionThree: "Sheridan" }
 ]
 
 // RANDOMIZE OPTIONS:
