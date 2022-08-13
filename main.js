@@ -248,7 +248,7 @@ const arizona = () => {
     // Increase statesInfoIndex by 1:
     incrementStatesInfoIndex();
 
-    // Empty stateOptions array (so that each state onlycontains four options & no options from other states):
+    // Empty stateOptions array (so that each state only contains four options & no options from other states):
     emptyStateOptions();
     
     // Function to randomize options:
