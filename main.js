@@ -2152,7 +2152,7 @@ const wyoming = () => {
         + '<div class="total-score"></div>'
         + '<div id="reset-next-btns">'
         + '<button class="reset-btn" onclick="window.location.href=window.location.href">Reset Game</button>'
-        + '<button class="next-btn">Next</button>'
+        + '<button class="next-btn">Get Results!</button>'
         + '</div>'
         '</section>'
 
