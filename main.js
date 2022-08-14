@@ -6,7 +6,7 @@ const setInitialBackground = () => {
 
 // Function to reduce #hero padding when first question loads:
 const reduceHeroPadding = () => {
-    document.getElementById('hero').style.padding = '34px';
+    document.getElementById('hero').style.padding = '42px';
 }
 
 // Initialize quiz score at 0:
