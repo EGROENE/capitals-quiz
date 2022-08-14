@@ -149,7 +149,7 @@ const randomizeOptions = (statesInfoIndex) => {
         stateOptions.push(option);
     }
 
-    // Loop to randomly order items in optionsArray:
+    // Loop to randomly order items in stateOptions array:
     for (let i = 1; i < stateOptions.length; i++) {
         const j = Math.floor(Math.random() * (i + 1));
         [stateOptions[i], stateOptions[j]] = [stateOptions[j], stateOptions[i]];
@@ -2161,31 +2161,43 @@ const wyoming = () => {
 }
 // END OF STATE FUNCTIONS
 
+// RESULTS PAGE
+// Function containing logic to display appropriate feedback:
+const getFeedback = (totalScore) => {
+    let feedback = '';
+    if (totalScore === 50) {
+        feedback = "<p>You got a perfect score! You must be really smart.</p>";
+    } else if (totalScore <= 49 && totalScore >= 40) {
+        feedback = "<p>Well done! Your score was " + totalScore + " / 50.</p>";
+    } else if (totalScore <= 39 && totalScore >= 30) {
+        feedback = "<p>Not too bad, but could've been better. Your score was " + totalScore + " / 50.</p>";
+    } else if (totalScore <= 29 && totalScore >= 20) {
+        feedback = "<p>Not very good. Your score was " + totalScore + " / 50.</p>";
+    } else if (totalScore <= 19 && totalScore >= 10) {
+        feedback = "<p>Bad. Your score was a miserable " + totalScore + " / 50.</p>";
+    } else if (totalScore <= 9 && totalScore >= 1) {
+        feedback = "<p>Abysmal. Your score was a pathetic " + totalScore + " / 50.</p>";
+    } else {
+        feedback = "<p>You didn't get a single one right. You have some studying to do.</p>"
+    }
+    return feedback;
+ }
+
 // Function to display results page (run on click of 'Get Results!' btn in wyoming()):
 const getResults = () => {
+    console.log(totalScore);
     // Hide last state:
     document.getElementById('display-question-wyoming').style.display = 'none';
 
     // Change background:
     setInitialBackground();
 
-    // Logic giving feedback and score:
-    let feedbackAndScore = '';
-    switch(totalScore) {
-        case totalScore === 50:
-            feedbackAndScore = "You got a perfect score! You must be really smart.";
-            break;
-        case totalScore >= 45 && totalScore < 50:
-            feedbackAndScore = `Well done! Your score was ${totalScore} / 50.`;
-            break;
-        case totalScore >= 30 && totalScore < 45:
-            feedbackAndScore = `Not too bad, but could've been better. Your score was ${totalScore} / 50.`
-            break;
-    }
-
     // Add HTML displaying round score:
+    // Put feedbacks into own array, then add below based on logic, as defined in separate function, like stateOptions[1]. EX: If >= 15 && < 30, then add feedbacks[2]. Return value from function, then try adding funct to html below.
     document.getElementById('hero').innerHTML +=
-    '<div id="results-box">'
-    '<h1>Thanks for taking the quiz!</h1>'
-    + '<p>' + feedbackAndScore + '<p>'
+    '<section id="results-box">'
+    + '<h1>Thanks for completing the quiz!</h1>'
+    + getFeedback(totalScore)
+    + '<button onclick="window.location.href=window.location.href">Play Again!</button>'
+    '</section>'
 }

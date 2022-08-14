@@ -11,17 +11,37 @@
         margin: 0;
         padding: var(--size-16);
     }
+
+    #results-box {
+        margin: 138px 77px;
+    }
 }
 
 @media screen and (max-width: 425px) {
     #hero {
         padding: 42px;
     }
+
+    #results-box {
+        margin: 69px 77px;
+    }
+
+    #results-box h1 {
+        font-size: var(--size-32);
+    }
+
+    #results-box p {
+        font-size: var(--size-24);
+    }
 }
 
 @media screen and (max-width: 375px) {
     #hero {
         padding: 25px;
+    }
+
+    #results-box {
+        margin: 69px 44px;
     }
 }
 
