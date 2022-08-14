@@ -39,7 +39,7 @@ const ifCorrect = () => {
     totalScore += 1;
     let scores = document.getElementsByClassName('total-score');
     for (const score of scores) {
-        score.innerHTML = 'That\'s correct! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
+        score.innerHTML = 'Correct! Total score for the round is: ' + totalScore + ' / ' + answeredStates;
     }
 }
 
