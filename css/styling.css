@@ -114,6 +114,10 @@
     color: rgba(16, 16, 16, 0.3);
 }
 
+#reset-gr-btns {
+    display: flex;
+}
+
 #results-box h1 {
     font-size: var(--size-48);
 }
