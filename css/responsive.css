@@ -29,7 +29,7 @@
     .display-question header,
     .total-score,
     .display-question button {
-        font-size: var(--size-24);
+        font-size: var(--size-20);
     }
 
     #results-box {
