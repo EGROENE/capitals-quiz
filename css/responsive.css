@@ -19,7 +19,17 @@
 
 @media screen and (max-width: 425px) {
     #hero {
-        padding: 42px;
+        padding: 71px 34px;
+    }
+
+    .display-question {
+        row-gap: var(--size-8);
+    }
+
+    .display-question header,
+    .total-score,
+    .display-question button {
+        font-size: var(--size-24);
     }
 
     #results-box {
@@ -40,8 +50,12 @@
         padding: 25px;
     }
 
+    .display-question {
+        row-gap: var(--size-4);
+    }
+
     #results-box {
-        margin: 69px 44px;
+        margin: 35px 24px;
     }
 }
 
@@ -54,6 +68,16 @@
         margin: 24px;
     }
 
+    .display-question header,
+    .total-score,
+    .display-question button {
+        font-size: var(--size-20);
+    }
+
+    .display-question {
+        row-gap: var(--size-8);
+    }
+
     #reset-next-btns {
         display: flex;
         flex-direction: column;
@@ -61,6 +85,10 @@
 
     .next-btn {
         margin-left: 0;
-        margin-top: var(--size-16);
+        margin-top: var(--size-8);
+    }
+
+    #results-box {
+        margin: 16px 14px;
     }
 }
