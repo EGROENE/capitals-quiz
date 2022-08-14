@@ -1,3 +1,36 @@
+@media screen and (min-width: 1300px) {
+    #greeting-box {
+        font-size: xx-large;
+        margin: 149px 240px;
+    }
+
+    #greeting-box button,
+    #results-box button {
+        font-size: xxx-large;
+    }
+
+    .display-question {
+        padding: 28px 45px 101px 45px;
+        row-gap: var(--size-24);
+        margin: 34px 34px 159px 34px;
+    }
+
+    .display-question header,
+    .total-score,
+    .display-question button {
+        font-size: xxx-large;
+        padding-bottom: var(--size-12);
+    }
+
+    #reset-gr-btns {
+        justify-content: center;
+    }
+
+    #results-box {
+        margin: 383px 240px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #hero {
         padding: 88px;
