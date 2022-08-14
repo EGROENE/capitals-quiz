@@ -51,7 +51,7 @@
     }
 
     .display-question {
-        row-gap: var(--size-4);
+        row-gap: var(--size-12);
     }
 
     #results-box {
