@@ -57,6 +57,7 @@
 
     .display-question {
         row-gap: var(--size-8);
+        padding: 44px;
     }
 
     .display-question header,
@@ -66,7 +67,7 @@
     }
 
     #results-box {
-        margin: 69px 77px;
+        margin: 69px 40px;
     }
 
     #results-box h1 {
