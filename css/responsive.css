@@ -95,7 +95,7 @@
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 387px) {
     #reset-next-btns {
         display: flex;
         flex-direction: column-reverse;
@@ -107,8 +107,13 @@
         margin-top: 0
     }
 
-    .reset-btn {
-        margin-top: 8px;
+    .next-btn {
+        margin-bottom: 8px;
+    }
+
+    #get-results-btn {
+        margin-left: 16px;
+        padding: 0;
     }
 
   /*   #reset-next-btns button:nth-child(2) {
