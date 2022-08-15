@@ -116,6 +116,7 @@
 
 #reset-gr-btns {
     display: flex;
+    justify-content: center;
 }
 
 #results-box h1 {
