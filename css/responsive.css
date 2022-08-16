@@ -31,6 +31,65 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    #hero {
+        padding: 247px 100px;
+    }
+
+    #greeting-box {
+        padding: 24px;
+    }
+
+    #greeting-box h1,
+    #results-box h1 {
+        font-size: 56px;
+    }
+
+    #greeting-box h2 {
+        font-size: 37px;
+    }
+
+    #greeting-box button,
+    #results-box button {
+        font-size: 42px;
+    }
+
+    .display-question {
+        padding: 117px 32px;
+        row-gap: 25px;
+        margin: 79px 160px 0 160px;
+    }
+
+    .display-question header {
+        font-size: 48px;
+    }
+
+    .display-question button  {
+        font-size: 42px;
+        padding-bottom: 12px;
+    }
+
+    .total-score {
+        font-size: 34px;
+    }
+
+    .next-btn {
+        margin-left: 42px;
+    }
+
+    #results-box {
+        padding: 209px 10px;
+    }
+
+    #results-box p {
+        font-size: 42px;
+    }
+
+    #results-box button {
+        padding: 16px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #hero {
         padding: 88px;
